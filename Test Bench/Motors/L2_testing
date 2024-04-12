@@ -1,0 +1,21 @@
+# Name: L2_Testing
+# Date: 4 / 12 / 2024
+# 
+# Author: Carter Cummings
+# Purpose: Testing L1 functions  
+
+from L1_WheelClass import *
+from L1_Motor import *
+
+
+frontwheels = WheelBlock()
+backwheels = WheelBlock()
+
+frontwheels.rotation = 3.14
+
+
+driveMotor(1,1)
+spin(1,1)
+driveStepper(1,1)
+
+print(frontwheels.rotation)

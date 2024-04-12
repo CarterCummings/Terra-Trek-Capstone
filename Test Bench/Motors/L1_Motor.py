@@ -23,7 +23,3 @@ def driveStepper(power,direction):
     print('driving stepper at: ' + str(power))
 
 
-
-driveMotor(1,1)
-spin(1,1)
-driveStepper(1,1)
