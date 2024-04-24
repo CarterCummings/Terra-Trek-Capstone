@@ -6,7 +6,13 @@
 
 from L1_WheelClass import *
 from L1_Motor import *
+import matlab.engine
 
+eng = matlab.engine.start_matlab()
+eng.eval('a = pi;',nargout=0)
+mpi = eng.workspace['a']
+print(mpi)
+print(eng.sqrt(mpi))
 
 frontwheels = WheelBlock()
 backwheels = WheelBlock()
@@ -19,3 +25,4 @@ spin(1,1)
 driveStepper(1,1)
 
 print(frontwheels.rotation)
+print(frontwheels.leftW.speed)
