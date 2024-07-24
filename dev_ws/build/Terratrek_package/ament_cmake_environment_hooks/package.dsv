@@ -1,0 +1,4 @@
+source;share/Terratrek_package/local_setup.bash
+source;share/Terratrek_package/local_setup.dsv
+source;share/Terratrek_package/local_setup.sh
+source;share/Terratrek_package/local_setup.zsh

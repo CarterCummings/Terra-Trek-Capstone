@@ -1,0 +1,50 @@
+[0.054s] Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/dev_ws/src/Terratrek_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/dev_ws/install/Terratrek_package
+[1.105s] -- The C compiler identification is GNU 13.2.0
+[5.628s] -- The CXX compiler identification is GNU 13.2.0
+[9.294s] -- Detecting C compiler ABI info
+[10.783s] -- Detecting C compiler ABI info - done
+[10.824s] -- Check for working C compiler: /usr/bin/cc - skipped
+[10.824s] -- Detecting C compile features
+[10.825s] -- Detecting C compile features - done
+[11.523s] -- Detecting CXX compiler ABI info
+[13.315s] -- Detecting CXX compiler ABI info - done
+[13.348s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[13.350s] -- Detecting CXX compile features
+[13.350s] -- Detecting CXX compile features - done
+[13.359s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[13.898s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[14.193s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[14.330s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[14.625s] WARNING: Package name "Terratrek_package" does not follow the naming conventions. It should start with a lower case letter and only contain lower case letters, digits, underscores, and dashes.
+[14.780s] -- Added test 'flake8' to check Python code syntax and style conventions
+[14.780s] -- Configured 'flake8' exclude dirs and/or files: 
+[14.784s] -- Added test 'lint_cmake' to check CMake code style
+[14.786s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[14.793s] -- Added test 'xmllint' to check XML markup files
+[14.798s] -- Configuring done (14.7s)
+[14.817s] -- Generating done (0.0s)
+[14.822s] -- Build files have been written to: /home/carter/dev_ws/build/Terratrek_package
+[14.837s] Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/dev_ws/src/Terratrek_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/dev_ws/install/Terratrek_package
+[14.839s] Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/dev_ws/build/Terratrek_package -- -j8 -l8
+[14.950s] Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/dev_ws/build/Terratrek_package -- -j8 -l8
+[15.040s] Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/dev_ws/build/Terratrek_package
+[15.066s] -- Install configuration: ""
+[15.068s] -- Execute custom install script
+[15.071s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/launch/listener.launch.py
+[15.072s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/launch/talker.launch.py
+[15.073s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/ament_index/resource_index/package_run_dependencies/Terratrek_package
+[15.073s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/ament_index/resource_index/parent_prefix_path/Terratrek_package
+[15.073s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/environment/ament_prefix_path.sh
+[15.074s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/environment/ament_prefix_path.dsv
+[15.076s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/environment/path.sh
+[15.076s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/environment/path.dsv
+[15.077s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/local_setup.bash
+[15.077s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/local_setup.sh
+[15.078s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/local_setup.zsh
+[15.078s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/local_setup.dsv
+[15.079s] -- Symlinking: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/package.dsv
+[15.118s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/ament_index/resource_index/packages/Terratrek_package
+[15.118s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/cmake/Terratrek_packageConfig.cmake
+[15.119s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/cmake/Terratrek_packageConfig-version.cmake
+[15.119s] -- Up-to-date symlink: /home/carter/dev_ws/install/Terratrek_package/share/Terratrek_package/package.xml
+[15.138s] Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/dev_ws/build/Terratrek_package
