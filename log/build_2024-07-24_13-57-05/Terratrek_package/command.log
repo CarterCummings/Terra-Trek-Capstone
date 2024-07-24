@@ -1,0 +1,2 @@
+Invoking command in '/home/carter/Terra-Trek-Capstone/build/Terratrek_package': /usr/bin/cmake /home/carter/Terra-Trek-Capstone/dev_ws/src/Terratrek_package -DCMAKE_INSTALL_PREFIX=/home/carter/Terra-Trek-Capstone/install/Terratrek_package
+Invoked command in '/home/carter/Terra-Trek-Capstone/build/Terratrek_package' returned '1': /usr/bin/cmake /home/carter/Terra-Trek-Capstone/dev_ws/src/Terratrek_package -DCMAKE_INSTALL_PREFIX=/home/carter/Terra-Trek-Capstone/install/Terratrek_package

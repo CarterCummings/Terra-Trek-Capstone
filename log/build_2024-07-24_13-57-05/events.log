@@ -1,0 +1,121 @@
+[0.000000] (-) TimerEvent: {}
+[0.000441] (Terratrek_package) JobQueued: {'identifier': 'Terratrek_package', 'dependencies': OrderedDict()}
+[0.001402] (Terratrek_package) JobStarted: {'identifier': 'Terratrek_package'}
+[0.024165] (Terratrek_package) JobProgress: {'identifier': 'Terratrek_package', 'progress': 'cmake'}
+[0.024613] (Terratrek_package) Command: {'cmd': ['/usr/bin/cmake', '/home/carter/Terra-Trek-Capstone/dev_ws/src/Terratrek_package', '-DCMAKE_INSTALL_PREFIX=/home/carter/Terra-Trek-Capstone/install/Terratrek_package'], 'cwd': '/home/carter/Terra-Trek-Capstone/build/Terratrek_package', 'env': OrderedDict({'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'carter', 'GIT_ASKPASS': '/home/carter/.vscode-server/bin/f1e16e1e6214d7c44d078b1f0607b2388f29d729/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'HOME': '/home/carter', 'OLDPWD': '/home/carter', 'TERM_PROGRAM_VERSION': '1.91.1', 'VSCODE_IPC_HOOK_CLI': '/run/user/1002/vscode-ipc-5131c6a1-dfd3-4c72-a500-bcc5e9d38c73.sock', 'VSCODE_GIT_ASKPASS_MAIN': '/home/carter/.vscode-server/bin/f1e16e1e6214d7c44d078b1f0607b2388f29d729/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/home/carter/.vscode-server/bin/f1e16e1e6214d7c44d078b1f0607b2388f29d729/node', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1002/bus', 'COLORTERM': 'truecolor', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'LOGNAME': 'carter', 'NAME': 'Carters-Laptop', 'WSL_INTEROP': '/run/WSL/34669_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'TERM': 'xterm-256color', 'PATH': '/home/carter/.vscode-server/bin/f1e16e1e6214d7c44d078b1f0607b2388f29d729/bin/remote-cli:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Python38/Scripts/:/mnt/c/Python38/:/mnt/c/Program Files (x86)/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/ProgramData/chocolatey/lib/cunit/lib:/mnt/c/ProgramData/chocolatey/lib/tinyxml2/lib:/mnt/c/ProgramData/chocolatey/lib/bullet/lib:/mnt/c/Program Files/Graphviz/bin:/mnt/c/Program Files/eProsima/fastrtps 2.7.0/bin:/mnt/c/Program Files/eProsima/fastrtps 2.7.0/bin/x64Win64VS2019:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin/:/mnt/c/Program Files/IVI Foundation/VISA/Win64/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/IVI/Bin/:/mnt/c/Program Files/IVI Foundation/IVI/Bin/:/mnt/c/Program Files (x86)/IVI Foundation/VISA/WinNT/Bin:/mnt/c/Program Files (x86)/National Instruments/Shared/LabVIEW CLI:/mnt/c/Program Files/MATLAB/R2024a/bin:/mnt/c/Program Files/MATLAB/R2023b/runtime/win64:/mnt/c/Program Files/MATLAB/R2023b/bin:/mnt/c/Program Files/PuTTY/:/mnt/c/Users/Carte/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Carte/AppData/Local/Programs/MiKTeX/miktex/bin/x64/:/mnt/c/Users/Carte/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/intelFPGA_lite/21.1/questa_fse/win64:/mnt/c/intelFPGA_lite/21.1/questa_fe/win64:/mnt/c/intelFPGA_lite/20.1/modelsim_ase/win32aloem:/mnt/c/Program Files/OpenSSL-Win64/bin/:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1002/', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/run/user/1002/vscode-git-65d3f8d376.sock', 'TERM_PROGRAM': 'vscode', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/carter/Terra-Trek-Capstone/build/Terratrek_package', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'VSCODE_WSL_EXT_LOCATION/up'}), 'shell': False}
+[0.104756] (-) TimerEvent: {}
+[0.207338] (-) TimerEvent: {}
+[0.311668] (-) TimerEvent: {}
+[0.412461] (-) TimerEvent: {}
+[0.513485] (-) TimerEvent: {}
+[0.614798] (-) TimerEvent: {}
+[0.715729] (-) TimerEvent: {}
+[0.720900] (Terratrek_package) StdoutLine: {'line': b'-- The C compiler identification is GNU 13.2.0\n'}
+[0.821417] (-) TimerEvent: {}
+[0.925279] (-) TimerEvent: {}
+[1.031633] (-) TimerEvent: {}
+[1.137545] (-) TimerEvent: {}
+[1.241741] (-) TimerEvent: {}
+[1.347932] (-) TimerEvent: {}
+[1.454506] (-) TimerEvent: {}
+[1.560254] (-) TimerEvent: {}
+[1.664031] (-) TimerEvent: {}
+[1.772325] (-) TimerEvent: {}
+[1.880591] (-) TimerEvent: {}
+[1.988775] (-) TimerEvent: {}
+[2.096908] (-) TimerEvent: {}
+[2.204213] (-) TimerEvent: {}
+[2.312465] (-) TimerEvent: {}
+[2.420590] (-) TimerEvent: {}
+[2.467908] (Terratrek_package) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 13.2.0\n'}
+[2.520991] (-) TimerEvent: {}
+[2.621760] (-) TimerEvent: {}
+[2.729903] (-) TimerEvent: {}
+[2.838077] (-) TimerEvent: {}
+[2.946208] (-) TimerEvent: {}
+[3.050497] (-) TimerEvent: {}
+[3.157526] (-) TimerEvent: {}
+[3.264974] (-) TimerEvent: {}
+[3.369249] (-) TimerEvent: {}
+[3.475555] (-) TimerEvent: {}
+[3.582043] (-) TimerEvent: {}
+[3.686728] (-) TimerEvent: {}
+[3.787639] (-) TimerEvent: {}
+[3.888114] (-) TimerEvent: {}
+[3.911339] (Terratrek_package) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.988318] (-) TimerEvent: {}
+[4.093469] (-) TimerEvent: {}
+[4.201659] (-) TimerEvent: {}
+[4.308621] (-) TimerEvent: {}
+[4.387314] (Terratrek_package) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[4.399262] (Terratrek_package) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[4.400205] (Terratrek_package) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[4.401298] (Terratrek_package) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[4.408867] (-) TimerEvent: {}
+[4.512487] (-) TimerEvent: {}
+[4.613356] (-) TimerEvent: {}
+[4.657345] (Terratrek_package) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[4.717807] (-) TimerEvent: {}
+[4.820658] (-) TimerEvent: {}
+[4.921388] (-) TimerEvent: {}
+[5.022144] (-) TimerEvent: {}
+[5.124717] (-) TimerEvent: {}
+[5.198466] (Terratrek_package) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[5.211427] (Terratrek_package) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[5.211905] (Terratrek_package) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[5.212439] (Terratrek_package) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[5.225830] (-) TimerEvent: {}
+[5.333423] (-) TimerEvent: {}
+[5.434429] (-) TimerEvent: {}
+[5.537033] (-) TimerEvent: {}
+[5.638271] (-) TimerEvent: {}
+[5.744231] (-) TimerEvent: {}
+[5.850595] (-) TimerEvent: {}
+[5.956940] (-) TimerEvent: {}
+[6.063561] (-) TimerEvent: {}
+[6.169985] (-) TimerEvent: {}
+[6.276366] (-) TimerEvent: {}
+[6.382739] (-) TimerEvent: {}
+[6.483605] (-) TimerEvent: {}
+[6.589180] (-) TimerEvent: {}
+[6.693154] (-) TimerEvent: {}
+[6.799622] (-) TimerEvent: {}
+[6.906103] (-) TimerEvent: {}
+[7.012547] (-) TimerEvent: {}
+[7.115902] (-) TimerEvent: {}
+[7.221983] (-) TimerEvent: {}
+[7.324923] (-) TimerEvent: {}
+[7.428179] (-) TimerEvent: {}
+[7.533886] (-) TimerEvent: {}
+[7.635047] (-) TimerEvent: {}
+[7.745373] (-) TimerEvent: {}
+[7.848534] (-) TimerEvent: {}
+[7.952047] (-) TimerEvent: {}
+[8.055734] (-) TimerEvent: {}
+[8.158470] (-) TimerEvent: {}
+[8.261954] (-) TimerEvent: {}
+[8.365350] (-) TimerEvent: {}
+[8.467986] (-) TimerEvent: {}
+[8.570841] (-) TimerEvent: {}
+[8.649063] (Terratrek_package) StderrLine: {'line': b'\x1b[31mCMake Error at CMakeLists.txt:9 (find_package):\n'}
+[8.649398] (Terratrek_package) StderrLine: {'line': b'  By not providing "Findament_cmake.cmake" in CMAKE_MODULE_PATH this project\n'}
+[8.649538] (Terratrek_package) StderrLine: {'line': b'  has asked CMake to find a package configuration file provided by\n'}
+[8.649660] (Terratrek_package) StderrLine: {'line': b'  "ament_cmake", but CMake did not find one.\n'}
+[8.649779] (Terratrek_package) StderrLine: {'line': b'\n'}
+[8.649894] (Terratrek_package) StderrLine: {'line': b'  Could not find a package configuration file provided by "ament_cmake" with\n'}
+[8.650026] (Terratrek_package) StderrLine: {'line': b'  any of the following names:\n'}
+[8.650409] (Terratrek_package) StderrLine: {'line': b'\n'}
+[8.650563] (Terratrek_package) StderrLine: {'line': b'    ament_cmakeConfig.cmake\n'}
+[8.650678] (Terratrek_package) StderrLine: {'line': b'    ament_cmake-config.cmake\n'}
+[8.650791] (Terratrek_package) StderrLine: {'line': b'\n'}
+[8.650906] (Terratrek_package) StderrLine: {'line': b'  Add the installation prefix of "ament_cmake" to CMAKE_PREFIX_PATH or set\n'}
+[8.651020] (Terratrek_package) StderrLine: {'line': b'  "ament_cmake_DIR" to a directory containing one of the above files.  If\n'}
+[8.651134] (Terratrek_package) StderrLine: {'line': b'  "ament_cmake" provides a separate development package or SDK, be sure it\n'}
+[8.651246] (Terratrek_package) StderrLine: {'line': b'  has been installed.\n'}
+[8.651362] (Terratrek_package) StderrLine: {'line': b'\n'}
+[8.651477] (Terratrek_package) StderrLine: {'line': b'\x1b[0m\n'}
+[8.651593] (Terratrek_package) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[8.657677] (Terratrek_package) CommandEnded: {'returncode': 1}
+[8.672462] (-) TimerEvent: {}
+[8.715055] (Terratrek_package) JobEnded: {'identifier': 'Terratrek_package', 'rc': 1}
+[8.717629] (-) EventReactorShutdown: {}

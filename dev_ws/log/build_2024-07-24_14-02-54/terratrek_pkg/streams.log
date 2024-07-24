@@ -1,0 +1,44 @@
+[0.026s] Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/Terra-Trek-Capstone/dev_ws/src/terratrek_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg
+[0.632s] -- The C compiler identification is GNU 13.2.0
+[2.462s] -- The CXX compiler identification is GNU 13.2.0
+[4.260s] -- Detecting C compiler ABI info
+[4.817s] -- Detecting C compiler ABI info - done
+[4.829s] -- Check for working C compiler: /usr/bin/cc - skipped
+[4.830s] -- Detecting C compile features
+[4.831s] -- Detecting C compile features - done
+[5.124s] -- Detecting CXX compiler ABI info
+[5.712s] -- Detecting CXX compiler ABI info - done
+[5.725s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[5.725s] -- Detecting CXX compile features
+[5.729s] -- Detecting CXX compile features - done
+[5.773s] -- Found ament_cmake: 2.5.2 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[5.997s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[6.123s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.237s] -- Found ament_lint_auto: 0.17.1 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[6.425s] -- Added test 'lint_cmake' to check CMake code style
+[6.429s] -- Added test 'xmllint' to check XML markup files
+[6.436s] -- Configuring done (6.3s)
+[6.454s] -- Generating done (0.0s)
+[6.456s] -- Build files have been written to: /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
+[6.463s] Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/Terra-Trek-Capstone/dev_ws/src/terratrek_pkg -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg
+[6.465s] Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+[6.519s] Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+[6.559s] Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
+[6.570s] -- Install configuration: ""
+[6.571s] -- Execute custom install script
+[6.573s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/package_run_dependencies/terratrek_pkg
+[6.587s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/parent_prefix_path/terratrek_pkg
+[6.601s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/ament_prefix_path.sh
+[6.614s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/ament_prefix_path.dsv
+[6.627s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/path.sh
+[6.640s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/path.dsv
+[6.654s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.bash
+[6.669s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.sh
+[6.681s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.zsh
+[6.694s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.dsv
+[6.706s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/package.dsv
+[6.720s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/packages/terratrek_pkg
+[6.735s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/cmake/terratrek_pkgConfig.cmake
+[6.747s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/cmake/terratrek_pkgConfig-version.cmake
+[6.760s] -- Symlinking: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/package.xml
+[6.776s] Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
