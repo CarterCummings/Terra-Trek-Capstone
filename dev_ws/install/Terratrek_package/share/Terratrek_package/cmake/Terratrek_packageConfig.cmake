@@ -1,1 +1,0 @@
-/home/carter/Terra-Trek-Capstone/dev_ws/build/Terratrek_package/ament_cmake_core/Terratrek_packageConfig.cmake

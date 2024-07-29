@@ -1,6 +1,0 @@
-Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/dev_ws/src/Terratrek_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/dev_ws/install/Terratrek_package
-Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/carter/dev_ws/src/Terratrek_package -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/carter/dev_ws/install/Terratrek_package
-Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/dev_ws/build/Terratrek_package -- -j8 -l8
-Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/dev_ws/build/Terratrek_package -- -j8 -l8
-Invoking command in '/home/carter/dev_ws/build/Terratrek_package': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/dev_ws/build/Terratrek_package
-Invoked command in '/home/carter/dev_ws/build/Terratrek_package' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/dev_ws/build/Terratrek_package

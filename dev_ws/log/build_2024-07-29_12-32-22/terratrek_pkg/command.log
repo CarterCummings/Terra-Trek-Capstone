@@ -1,0 +1,4 @@
+Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
+Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg

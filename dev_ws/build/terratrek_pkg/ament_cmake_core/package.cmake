@@ -1,5 +1,5 @@
 set(_AMENT_PACKAGE_NAME "terratrek_pkg")
-set(terratrek_pkg_VERSION "0.0.0")
+set(terratrek_pkg_VERSION "0.1.0")
 set(terratrek_pkg_MAINTAINER "carter <carter@todo.todo>")
 set(terratrek_pkg_BUILD_DEPENDS )
 set(terratrek_pkg_BUILDTOOL_DEPENDS "ament_cmake")

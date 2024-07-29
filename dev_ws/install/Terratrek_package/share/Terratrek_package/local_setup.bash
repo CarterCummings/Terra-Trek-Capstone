@@ -1,1 +1,0 @@
-/home/carter/Terra-Trek-Capstone/dev_ws/build/Terratrek_package/ament_cmake_environment_hooks/local_setup.bash

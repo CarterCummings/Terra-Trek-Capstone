@@ -16,7 +16,7 @@ set(_terratrek_pkg_CONFIG_INCLUDED TRUE)
 
 # output package information
 if(NOT terratrek_pkg_FIND_QUIETLY)
-  message(STATUS "Found terratrek_pkg: 0.0.0 (${terratrek_pkg_DIR})")
+  message(STATUS "Found terratrek_pkg: 0.1.0 (${terratrek_pkg_DIR})")
 endif()
 
 # warn when using a deprecated package

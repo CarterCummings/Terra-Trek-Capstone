@@ -1,1 +1,0 @@
-/home/carter/Terra-Trek-Capstone/dev_ws/src/Terratrek_package/launch/talker.launch.py
