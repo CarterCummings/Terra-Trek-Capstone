@@ -1,0 +1,23 @@
+[0.026s] Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+[0.180s] Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg -- -j8 -l8
+[0.234s] Invoking command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
+[0.246s] -- Install configuration: ""
+[0.248s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/launch
+[0.248s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/launch/talker.launch.py
+[0.249s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/launch/listener.launch.py
+[0.249s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/package_run_dependencies/terratrek_pkg
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/parent_prefix_path/terratrek_pkg
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/ament_prefix_path.sh
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/ament_prefix_path.dsv
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/path.sh
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/environment/path.dsv
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.bash
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.sh
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.zsh
+[0.250s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/local_setup.dsv
+[0.250s] -- Installing: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/package.dsv
+[0.251s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/ament_index/resource_index/packages/terratrek_pkg
+[0.252s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/cmake/terratrek_pkgConfig.cmake
+[0.252s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/cmake/terratrek_pkgConfig-version.cmake
+[0.252s] -- Up-to-date: /home/carter/Terra-Trek-Capstone/dev_ws/install/terratrek_pkg/share/terratrek_pkg/package.xml
+[0.256s] Invoked command in '/home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/carter/Terra-Trek-Capstone/dev_ws/build/terratrek_pkg
