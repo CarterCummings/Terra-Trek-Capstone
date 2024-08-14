@@ -1,9 +1,0 @@
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/uninstall.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/terratrek_robot_uninstall.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/test.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/edit_cache.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/rebuild_cache.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/list_install_components.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/install.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/install/local.dir
-/home/carter/ros2_ws/build/terratrek_robot/CMakeFiles/install/strip.dir

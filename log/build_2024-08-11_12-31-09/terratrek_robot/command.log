@@ -1,6 +1,0 @@
-Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carter/ros2_ws/src/terratrek_robot -DCMAKE_INSTALL_PREFIX=/home/carter/ros2_ws/install/terratrek_robot
-Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carter/ros2_ws/src/terratrek_robot -DCMAKE_INSTALL_PREFIX=/home/carter/ros2_ws/install/terratrek_robot
-Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carter/ros2_ws/build/terratrek_robot -- -j8 -l8
-Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carter/ros2_ws/build/terratrek_robot -- -j8 -l8
-Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carter/ros2_ws/build/terratrek_robot
-Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carter/ros2_ws/build/terratrek_robot
