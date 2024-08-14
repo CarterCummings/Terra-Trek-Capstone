@@ -1,0 +1,445 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" >
+
+    <xacro:include filename="inertial_macros.xacro"/>
+
+
+    <xacro:property name="chassis_length" value="0.45"/>
+    <xacro:property name="chassis_width" value="0.255"/>
+    <xacro:property name="chassis_height" value="0.12"/>
+
+    <xacro:property name="arm_length" value="0.4064"/>
+    <xacro:property name="arm_width" value="0.015"/>
+    <xacro:property name="arm_height" value="0.045"/>
+    <xacro:property name="arm_offset" value="0.1425"/> 
+    <xacro:property name="arm_outer_offset" value="0.052"/>    
+    
+    <xacro:property name="leg_length" value="0.225"/>
+    <xacro:property name="leg_width" value="0.015"/>
+    <xacro:property name="leg_height" value="0.015"/>    
+
+    <xacro:property name="wheel_radius" value="0.0635"/>    
+    <xacro:property name="wheel_thickness" value="0.06985"/>
+    <xacro:property name="wheel_mass" value="0.02"/>
+
+
+   <xacro:property name="wheel_offset_y" value="0.2667"/>
+   <xacro:property name="wheel_offset_x" value="0.27305"/>
+
+    <material name="white">
+        <color rgba="1 1 1 1" />
+    </material>
+
+    <material name="black">
+        <color rgba="0 0 0 1"/>
+    </material>
+
+    <material name="red">
+        <color rgba=".5 0 0 1"/>
+    </material>
+
+    <!-- BASE LINK -->
+
+    <link name="base_link">
+
+    </link>
+
+    <!-- CHASSIS LINK -->
+
+    <joint name="chassis_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="chassis"/>
+        <origin xyz="0 0 .5"/>
+    </joint>
+
+    <link name="chassis">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.5" x="${chassis_length}" y="${chassis_width}" z="${chassis_height}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- INNER RIGHT ARM-->
+
+    <joint name="right_arm_inner_joint" type="revolute">
+        <parent link="chassis"/>
+        <child link="right_arm_inner"/>
+        <origin xyz="0 -${arm_offset} -0.038"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="2.0" lower="-${pi/6}" upper="${pi/6}" />
+        <dynamics damping="3" friction="0.025"/>
+    </joint>
+
+    <link name="right_arm_inner">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.2" x="${arm_length}" y="${arm_width}" z="${arm_height}">
+            <origin xyz="${arm_length/2} 0 ${arm_height/2}" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>    
+
+    <!-- INNER LEFT ARM-->
+
+    <joint name="left_arm_inner_joint" type="revolute">
+        <parent link="chassis"/>
+        <child link="left_arm_inner"/>
+        <origin xyz="0 ${arm_offset} -0.038"/>
+        <axis xyz="0 1 0"/>
+        <limit effort="100" velocity="2.0" lower="-${pi/6}" upper="${pi/6}"/>
+        <mimic joint="right_arm_inner_joint" multiplier="1.0"/>
+        <dynamics damping="3" friction=".025"/>
+    </joint>
+
+    <link name="left_arm_inner">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.2" x="${arm_length}" y="${arm_width}" z="${arm_height}">
+            <origin xyz="${arm_length/2} 0 ${arm_height/2}" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>    
+
+    <!-- OUTER RIGHT ARM-->
+
+    <joint name="right_arm_outer_joint" type="prismatic">
+        <parent link="right_arm_inner"/>
+        <child link="right_arm_outer"/>
+        <origin xyz="${arm_outer_offset} -${arm_width + .001} 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="2" velocity="0.01" upper="0.2"/> 
+        <dynamics damping="3" friction="0.025"/>
+    </joint>
+
+    <link name="right_arm_outer">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.2" x="${arm_length}" y="${arm_width}" z="${arm_height}">
+            <origin xyz="${arm_length/2} 0 ${arm_height/2}" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>    
+
+    <!-- OUTER LEFT ARM-->
+
+    <joint name="left_arm_outer_joint" type="prismatic">
+        <parent link="left_arm_inner"/>
+        <child link="left_arm_outer"/>
+        <origin xyz="${arm_outer_offset} ${arm_width + .001} 0"/>
+        <axis xyz="1 0 0"/>
+        <limit effort="2" velocity="0.01" upper=".2"/> 
+        <dynamics damping="3" friction="0.025"/>
+    </joint>
+
+    <link name="left_arm_outer">
+        <visual>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0"/>
+            <geometry>
+                <box size="${arm_length} ${arm_width} ${arm_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.2" x="${arm_length}" y="${arm_width}" z="${arm_height}">
+            <origin xyz="${arm_length/2} 0 ${arm_height/2}" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link> 
+
+    <!-- FRONT LEFT LEG--> 
+
+    <joint name="FL_leg_joint" type="fixed">
+        <parent link="left_arm_outer"/>
+        <child link="FL_leg"/>
+        <origin xyz=".27 ${leg_width} -0.16" rpy="0 ${1.0821 + pi} 0"/>
+    </joint>
+
+    <link name="FL_leg">
+        <visual>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="${leg_length}" y="${leg_width}" z="${leg_height}">
+            <origin xyz="${leg_length/2 -.025} 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+    <!-- FRONT LEFT WHEEL LINK -->
+
+    <joint name="FL_wheel_joint" type="continuous">
+        <parent link="FL_leg"/>
+        <child link="FL_wheel"/>
+        <origin xyz="0 ${leg_width + wheel_thickness/2} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="FL_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- FRONT RIGHT LEG -->
+
+    <joint name="FR_leg_joint" type="fixed">
+        <parent link="right_arm_outer"/>
+        <child link="FR_leg"/>
+        <origin xyz=".27 -${leg_width} -0.16" rpy="0 ${1.0821 + pi} 0"/>
+    </joint>
+
+    <link name="FR_leg">
+        <visual>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="${leg_length/2 -.025} 0 0"/>
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="${leg_length}" y="${leg_width}" z="${leg_height}">
+            <origin xyz="${leg_length/2 -.025} 0 0" rpy="0 0 0"/>
+        </xacro:inertial_box>
+    </link>
+
+
+    <!-- FRONT RIGHT WHEEL LINK -->
+
+    <joint name="FR_wheel_joint" type="continuous">
+        <parent link="FR_leg"/>
+        <child link="FR_wheel"/>
+        <origin xyz="0 -${leg_width + wheel_thickness/2} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="FR_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- BACK LEFT LEG--> 
+
+    <joint name="BL_leg_joint" type="fixed">
+        <parent link="left_arm_inner"/>
+        <child link="BL_leg"/>
+        <origin xyz="-.27 ${leg_width + arm_width} -0.16" rpy="0 ${2.059489 + pi} 0"/>
+    </joint>
+
+    <link name="BL_leg">
+        <visual>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="${leg_length}" y="${leg_width}" z="${leg_height}">
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+        </xacro:inertial_box>
+    </link>
+
+
+    <!-- BACK LEFT WHEEL LINK -->
+
+    <joint name="BL_wheel_joint" type="continuous">
+        <parent link="BL_leg"/>
+        <child link="BL_wheel"/>
+        <origin xyz="0 ${leg_width + wheel_thickness/2} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="BL_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    <!-- BACK RIGHT LEG--> 
+
+    <joint name="BR_leg_joint" type="fixed">
+        <parent link="right_arm_inner"/>
+        <child link="BR_leg"/>
+        <origin xyz="-.27 -${leg_width + arm_width} -0.16" rpy="0 ${2.059489 + pi} 0"/>
+    </joint>
+
+    <link name="BR_leg">
+        <visual>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+            <material name="white"/>
+        </visual>
+        <collision>
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+            <geometry>
+                <box size="${leg_length} ${leg_width} ${leg_height}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_box mass="0.1" x="${leg_length}" y="${leg_width}" z="${leg_height}">
+            <origin xyz="${leg_length/2 -.025} 0 0" />
+        </xacro:inertial_box>
+    </link>
+
+    <!-- BACK RIGHT WHEEL LINK -->
+
+    <joint name="BR_wheel_joint" type="continuous">
+        <parent link="BR_leg"/>
+        <child link="BR_wheel"/>
+        <origin xyz="0 -${leg_width + wheel_thickness/2} 0" rpy="-${pi/2} 0 0" />
+        <axis xyz="0 0 1"/>
+    </joint>
+
+    <link name="BR_wheel">
+        <visual>
+            <geometry>
+                <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+            </geometry>
+            <material name="black"/>
+        </visual>
+        <collision>
+            <geometry>
+                <sphere radius="${wheel_radius}"/>
+            </geometry>
+        </collision>
+        <xacro:inertial_cylinder mass="${wheel_mass}" length="${wheel_thickness}" radius="${wheel_radius}">
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </xacro:inertial_cylinder>
+    </link>
+
+    
+    <gazebo>
+        <plugin name="joint_states" filename="libgazebo_ros_joint_state_publisher.so">
+        <ros>
+            <!-- <namespace>/br</namespace> -->
+            <remapping>~/out:=joint_states</remapping>
+        </ros>
+        <update_rate>30</update_rate>
+        <joint_name>right_arm_inner_joint</joint_name>
+        <joint_name>right_arm_outer_joint</joint_name>
+        <joint_name>left_arm_inner_joint</joint_name>
+        <joint_name>left_arm_outer_joint</joint_name>
+
+
+        <joint_name>BL_wheel_joint</joint_name>
+        <joint_name>BR_wheel_joint</joint_name>
+        <joint_name>FL_wheel_joint</joint_name>
+        <joint_name>FR_wheel_joint</joint_name>
+
+        </plugin>
+    </gazebo>
+
+    <!-- Gazebo Colors-->
+    <gazebo reference="FR_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="BR_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>    
+    <gazebo reference="FL_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <gazebo reference="BL_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+   
+</robot>

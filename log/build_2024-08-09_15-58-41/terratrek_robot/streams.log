@@ -1,0 +1,58 @@
+[0.013s] Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carter/ros2_ws/src/terratrek_robot -DCMAKE_INSTALL_PREFIX=/home/carter/ros2_ws/install/terratrek_robot
+[0.402s] -- The C compiler identification is GNU 11.4.0
+[0.720s] -- The CXX compiler identification is GNU 11.4.0
+[0.734s] -- Detecting C compiler ABI info
+[0.888s] -- Detecting C compiler ABI info - done
+[0.914s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.917s] -- Detecting C compile features
+[0.920s] -- Detecting C compile features - done
+[0.931s] -- Detecting CXX compiler ABI info
+[1.104s] -- Detecting CXX compiler ABI info - done
+[1.128s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[1.129s] -- Detecting CXX compile features
+[1.131s] -- Detecting CXX compile features - done
+[1.139s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.369s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.487s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.569s] -- Added test 'flake8' to check Python code syntax and style conventions
+[1.569s] -- Added test 'lint_cmake' to check CMake code style
+[1.570s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[1.571s] -- Added test 'xmllint' to check XML markup files
+[1.573s] -- Configuring done
+[1.576s] -- Generating done
+[1.577s] -- Build files have been written to: /home/carter/ros2_ws/build/terratrek_robot
+[1.588s] Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/carter/ros2_ws/src/terratrek_robot -DCMAKE_INSTALL_PREFIX=/home/carter/ros2_ws/install/terratrek_robot
+[1.590s] Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carter/ros2_ws/build/terratrek_robot -- -j8 -l8
+[1.694s] Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/carter/ros2_ws/build/terratrek_robot -- -j8 -l8
+[1.756s] Invoking command in '/home/carter/ros2_ws/build/terratrek_robot': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carter/ros2_ws/build/terratrek_robot
+[1.766s] -- Install configuration: ""
+[1.766s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/config
+[1.766s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/config/gazebo_params.yaml
+[1.768s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/config/twist_mux.yaml
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/description
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/description/robot_core.xacro
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/description/robot.urdf.xacro
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/description/inertial_macros.xacro
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/description/gazebo_control.xacro
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/launch
+[1.769s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/launch/launch_sim.launch.py
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/launch/rsp.launch.py
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/launch/joystick.launch.py
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/worlds
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/worlds/robot_world.sdf
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/ament_index/resource_index/package_run_dependencies/terratrek_robot
+[1.770s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/ament_index/resource_index/parent_prefix_path/terratrek_robot
+[1.771s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/environment/ament_prefix_path.sh
+[1.771s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/environment/ament_prefix_path.dsv
+[1.771s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/environment/path.sh
+[1.771s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/environment/path.dsv
+[1.771s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/local_setup.bash
+[1.772s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/local_setup.sh
+[1.772s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/local_setup.zsh
+[1.772s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/local_setup.dsv
+[1.772s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/package.dsv
+[1.772s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/ament_index/resource_index/packages/terratrek_robot
+[1.773s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/cmake/terratrek_robotConfig.cmake
+[1.773s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/cmake/terratrek_robotConfig-version.cmake
+[1.773s] -- Installing: /home/carter/ros2_ws/install/terratrek_robot/share/terratrek_robot/package.xml
+[1.777s] Invoked command in '/home/carter/ros2_ws/build/terratrek_robot' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/carter/ros2_ws/build/terratrek_robot
