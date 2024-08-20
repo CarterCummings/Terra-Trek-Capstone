@@ -1,0 +1,18 @@
+publisher_joint_trajectory_controller:
+  ros__parameters:
+
+    controller_name: "pos_cont_left"
+    wait_sec_between_publish: 6
+
+    goal_names: ["pos1", "pos2"]
+    pos1:
+      positions: [0.0]
+    pos2:
+      positions: [100.0]
+
+    joints:
+      - left_arm_outer_joint
+
+    check_starting_point: false
+    starting_point_limits:
+      left_arm_outer_joint: [-0.1,0.1]

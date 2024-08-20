@@ -78,8 +78,8 @@
         <child link="right_arm_inner"/>
         <origin xyz="0 -${arm_offset} -0.038"/>
         <axis xyz="0 1 0"/>
-        <limit effort="100" velocity="2.0" lower="-${pi/6}" upper="${pi/6}" />
-        <dynamics damping="3" friction="0.025"/>
+        <limit effort="100" velocity="5.0" lower="-${pi/6}" upper="${pi/6}" />
+        <dynamics damping="10" friction="0.25"/>
     </joint>
 
     <link name="right_arm_inner">
@@ -108,9 +108,9 @@
         <child link="left_arm_inner"/>
         <origin xyz="0 ${arm_offset} -0.038"/>
         <axis xyz="0 1 0"/>
-        <limit effort="100" velocity="2.0" lower="-${pi/6}" upper="${pi/6}"/>
+        <limit effort="100" velocity="5.0" lower="-${pi/6}" upper="${pi/6}"/>
         <mimic joint="right_arm_inner_joint" multiplier="1.0"/>
-        <dynamics damping="3" friction=".025"/>
+        <dynamics damping="10" friction="0.25"/>
     </joint>
 
     <link name="left_arm_inner">
@@ -134,13 +134,13 @@
 
     <!-- OUTER RIGHT ARM-->
 
-    <joint name="right_arm_outer_joint" type="prismatic">
+    <joint name="right_arm_outer_joint" type="fixed">   
         <parent link="right_arm_inner"/>
         <child link="right_arm_outer"/>
         <origin xyz="${arm_outer_offset} -${arm_width + .001} 0"/>
         <axis xyz="1 0 0"/>
-        <limit effort="2" velocity="0.01" upper="0.2"/> 
-        <dynamics damping="3" friction="0.025"/>
+        <!--limit effort="100" velocity="0.01" upper="0.2"/--> 
+        <!--dynamics damping="3" friction="0.025"/-->
     </joint>
 
     <link name="right_arm_outer">
@@ -164,13 +164,13 @@
 
     <!-- OUTER LEFT ARM-->
 
-    <joint name="left_arm_outer_joint" type="prismatic">
+    <joint name="left_arm_outer_joint" type="fixed">
         <parent link="left_arm_inner"/>
         <child link="left_arm_outer"/>
         <origin xyz="${arm_outer_offset} ${arm_width + .001} 0"/>
         <axis xyz="1 0 0"/>
-        <limit effort="2" velocity="0.01" upper=".2"/> 
-        <dynamics damping="3" friction="0.025"/>
+        <!--limit effort="100" velocity="0.01" upper=".2"/--> 
+        <!--dynamics damping="3" friction="0.025"/-->
     </joint>
 
     <link name="left_arm_outer">
@@ -431,12 +431,16 @@
     <!-- Gazebo Colors-->
     <gazebo reference="FR_wheel">
         <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>
+        <!--mu2 value="0.001"/-->
     </gazebo>
     <gazebo reference="BR_wheel">
         <material>Gazebo/Black</material>
     </gazebo>    
     <gazebo reference="FL_wheel">
         <material>Gazebo/Black</material>
+        <mu1 value="0.001"/>
+        <!--mu2 value="0.001"/-->        
     </gazebo>
     <gazebo reference="BL_wheel">
         <material>Gazebo/Black</material>

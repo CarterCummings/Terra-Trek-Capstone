@@ -56,11 +56,11 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
 
-    position_cont_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["position_cont"],
-    )
+#    position_cont_spawner = Node(
+#        package="controller_manager",
+#        executable="spawner",
+#        arguments=["pos_cont_left"],
+#    )
 
     joystick = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
