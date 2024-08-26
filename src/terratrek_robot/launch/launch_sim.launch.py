@@ -74,13 +74,6 @@ def generate_launch_description():
 #        arguments=["pos_cont_left"],
 #    )
 
-    static_transform = Node(
-            package='tf2_ros',
-            namespace = 'scan_to_map',
-            executable='static_transform_publisher',
-            arguments= ["0", "0", "0", "0", "0", "0", "map", "scan"]
-        )
-
     joystick = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory(package_name),'launch','joystick.launch.py'
@@ -95,7 +88,6 @@ def generate_launch_description():
         rviz,
         skid_drive_spawner,
         joint_broad_spawner,
-        joystick,
-        static_transform,
+        joystick,   
         #position_cont_spawner,
     ])

@@ -36,7 +36,7 @@
             <ray>
                 <scan>
                     <horizontal>
-                        <samples>810</samples>
+                        <samples>${270*3}</samples>
                         <min_angle>-${3*pi/4}</min_angle>
                         <max_angle>${3*pi/4}</max_angle>
                     </horizontal>

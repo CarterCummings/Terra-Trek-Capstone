@@ -444,16 +444,12 @@
     <!-- Gazebo Colors-->
     <gazebo reference="FR_wheel">
         <material>Gazebo/Black</material>
-        <mu1 value="0.001"/>
-        <!--mu2 value="0.001"/-->
     </gazebo>
     <gazebo reference="BR_wheel">
         <material>Gazebo/Black</material>
     </gazebo>    
     <gazebo reference="FL_wheel">
-        <material>Gazebo/Black</material>
-        <mu1 value="0.001"/>
-        <!--mu2 value="0.001"/-->        
+        <material>Gazebo/Black</material>       
     </gazebo>
     <gazebo reference="BL_wheel">
         <material>Gazebo/Black</material>
