@@ -68,6 +68,14 @@ def generate_launch_description():
         arguments=["joint_broad"],
     )
 
+    twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
+    twist_mux = Node(
+            package="twist_mux",
+            executable="twist_mux",
+            parameters=[twist_mux_params, {'use_sim_time': True}],
+            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+        )
+
 #    position_cont_spawner = Node(
 #        package="controller_manager",
 #        executable="spawner",
@@ -88,6 +96,7 @@ def generate_launch_description():
         rviz,
         skid_drive_spawner,
         joint_broad_spawner,
-        joystick,   
+        joystick,
+        twist_mux,
         #position_cont_spawner,
     ])

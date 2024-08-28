@@ -27,9 +27,10 @@ skid_cont:
 
     use_stamped_vel: false
 
-    # open_loop: false    
-
+    open_loop: true
+    
     wheels_per_side: 2
+    
     # wheel_separation_multiplier: x
     # left_wheel_radius_multiplier: x
     # right_wheel_radius_multiplier: x
