@@ -1,10 +1,10 @@
 from launch import LaunchDescription
-from launch_ros.actions import Node
-from launch.substitutions import LaunchConfiguration
-from launch.actions import DeclareLaunchArgument
+from launch_ros.actions import Node # type: ignore
+from launch.substitutions import LaunchConfiguration # type: ignore
+from launch.actions import DeclareLaunchArgument # type: ignore
 
 import os
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory # type: ignore
 
 def generate_launch_description():
     use_sim_time = LaunchConfiguration('use_sim_time')
@@ -22,7 +22,7 @@ def generate_launch_description():
             executable='teleop_node',
             name='teleop_node',
             parameters=[joy_params, {'use_sim_time': use_sim_time}],
-            remappings=[('/cmd_vel','/skid_cont/cmd_vel_unstamped')]
+            remappings=[('/cmd_vel','/cmd_vel_joy')]
          )
 
     # twist_stamper = Node(

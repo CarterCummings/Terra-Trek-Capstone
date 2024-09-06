@@ -1,14 +1,14 @@
 import os
 
-from ament_index_python.packages import get_package_share_directory
+from ament_index_python.packages import get_package_share_directory # type: ignore
 
-from launch import LaunchDescription
-from launch.actions import IncludeLaunchDescription
-from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration
+from launch import LaunchDescription 
+from launch.actions import IncludeLaunchDescription # type: ignore
+from launch.launch_description_sources import PythonLaunchDescriptionSource # type: ignore
+from launch.substitutions import LaunchConfiguration # type: ignore
 
 
-from launch_ros.actions import Node
+from launch_ros.actions import Node # type: ignore
 
  
 
@@ -73,7 +73,7 @@ def generate_launch_description():
             package="twist_mux",
             executable="twist_mux",
             parameters=[twist_mux_params, {'use_sim_time': True}],
-            remappings=[('/cmd_vel_out','/diff_cont/cmd_vel_unstamped')]
+            remappings=[('/cmd_vel_out','/skid_cont/cmd_vel_unstamped')]
         )
 
 #    position_cont_spawner = Node(
