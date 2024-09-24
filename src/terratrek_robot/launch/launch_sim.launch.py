@@ -5,7 +5,8 @@ from ament_index_python.packages import get_package_share_directory # type: igno
 from launch import LaunchDescription 
 from launch.actions import IncludeLaunchDescription # type: ignore
 from launch.launch_description_sources import PythonLaunchDescriptionSource # type: ignore
-from launch.substitutions import LaunchConfiguration # type: ignore
+from launch.substitutions import LaunchConfiguration,  PathJoinSubstitution # type: ignore
+from launch_ros.substitutions import FindPackageShare
 
 
 from launch_ros.actions import Node # type: ignore
@@ -56,16 +57,19 @@ def generate_launch_description():
         output="log",
     ) 
 
-    skid_drive_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        arguments=["skid_cont"],
+    robot_controllers = PathJoinSubstitution(
+        [
+            FindPackageShare("ros2_control_demo_example_3"),
+            "config",
+            "rrbot_multi_interface_forward_controllers.yaml",
+        ]
     )
 
-    joint_broad_spawner = Node(
+    controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["joint_broad"],
+        arguments=["skid_cont",
+                   "joint_broad",],
     )
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
@@ -76,11 +80,6 @@ def generate_launch_description():
             remappings=[('/cmd_vel_out','/skid_cont/cmd_vel_unstamped')]
         )
 
-#    position_cont_spawner = Node(
-#        package="controller_manager",
-#        executable="spawner",
-#        arguments=["pos_cont_left"],
-#    )
 
     joystick = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
@@ -94,8 +93,7 @@ def generate_launch_description():
         gazebo,
         spawn_entity,
         rviz,
-        skid_drive_spawner,
-        joint_broad_spawner,
+        controller_spawner,
         joystick,
         twist_mux,
         #position_cont_spawner,
