@@ -8,6 +8,7 @@ from launch.launch_description_sources import PythonLaunchDescriptionSource # ty
 from launch.substitutions import LaunchConfiguration,  PathJoinSubstitution # type: ignore
 from launch_ros.substitutions import FindPackageShare
 
+import launch_ros.parameter_descriptions
 
 from launch_ros.actions import Node # type: ignore
 
@@ -26,15 +27,6 @@ def generate_launch_description():
                     get_package_share_directory(package_name),'launch','rsp.launch.py'
                 )]), launch_arguments={'use_sim_time': 'true'}.items()
     )
-
-    world = os.path.join(get_package_share_directory('terratrek_robot'),'mainworld.world')
-
-    # Include the Gazebo launch file, provided by the gazebo_ros package
-    #gazebo = IncludeLaunchDescription(
-    #            PythonLaunchDescriptionSource([os.path.join(
-    #                get_package_share_directory('gazebo_ros'), 'launch', 'gazebo.launch.py'
-    #            )]), launch_arguments={'world': "$(find terratrek_robot)/worlds/mainworld.world"}.items()
-    #)
 
     gazebo_params_file = os.path.join(get_package_share_directory(package_name),'config','gazebo_params.yaml')
 
@@ -57,19 +49,24 @@ def generate_launch_description():
         output="log",
     ) 
 
-    robot_controllers = PathJoinSubstitution(
-        [
-            FindPackageShare("ros2_control_demo_example_3"),
-            "config",
-            "rrbot_multi_interface_forward_controllers.yaml",
-        ]
-    )
-
     controller_spawner = Node(
         package="controller_manager",
         executable="spawner",
         arguments=["skid_cont",
                    "joint_broad",],
+    )
+
+    extender_spawner = Node(
+        package="controller_manager",
+        executable="spawner",
+        parameters=[
+            launch_ros.parameter_descriptions.ParameterFile(
+                param_file=os.path.join(get_package_share_directory(package_name),'config','extenders_config.yaml'),
+                allow_substs=True), {'use_sim_time': True} ], 
+        arguments=[
+                "joint_state_controller",
+                "joint1_position_controller",
+                "joint2_position_controller",],
     )
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
@@ -96,5 +93,6 @@ def generate_launch_description():
         controller_spawner,
         joystick,
         twist_mux,
+        extender_spawner,
         #position_cont_spawner,
     ])

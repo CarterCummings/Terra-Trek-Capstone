@@ -46,43 +46,13 @@
 
         </joint>
 
-        <!--joint name="right_arm_inner_joint">
-            <command_interface name="position">
-            <param name="min">-0.1250</param>
-            <param name="max">.1250</param>
-            </command_interface>
-            <state_interface name="position"/>
-        </joint-->
-
-
-        <!-- <joint name="right_arm_outer_joint">
-            <command_interface name="effort">
-            <param name="min">0</param>
-            <param name="max">5</param>
-            </command_interface>
-            <state_interface name="position">
-            <param name="initial_value">0.0</param>
-            </state_interface>            
-        </joint> -->
-
-        <!-- <joint name="left_arm_outer_joint">
-            <command_interface name="effort">
-            <param name="min">0</param>
-            <param name="max">5</param>
-            </command_interface>
-            <state_interface name="position"/>
-            <state_interface name="position">
-            <param name="initial_value">0.0</param>
-            </state_interface>                 
-        </joint> -->
-
-
     </ros2_control>
 
     <gazebo>
         <plugin name="skid_steer_drive" filename="libgazebo_ros2_control.so">
             <parameters>$(find terratrek_robot)/config/my_controllers.yaml</parameters>
         </plugin>
+
         <plugin filename="libroboticsgroup_upatras_gazebo_mimic_joint_plugin.so" name="mimic_robotiq_85_1">
             <joint>left_arm_inner_joint</joint>
             <mimicJoint>right_arm_inner_joint</mimicJoint>
@@ -91,5 +61,27 @@
             <maxEffort>5.0</maxEffort>
         </plugin>            
     </gazebo>
+
+    <transmission name="trans_extender_left">
+        <type>transmission_interface/SimpleTransmission</type>
+            <joint name="left_arm_outer_joint">
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            </joint>
+        <actuator name="motor_extender_left">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="trans_extender_right">
+        <type>transmission_interface/SimpleTransmission</type>
+            <joint name="right_arm_outer_joint">
+                <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            </joint>
+        <actuator name="motor_extender_right">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
 
 </robot>
