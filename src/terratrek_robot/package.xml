@@ -4,7 +4,7 @@
   <name>terratrek_robot</name>
   <version>0.0.0</version>
   <description>TODO: Package description</description>
-  <maintainer email="carter@todo.todo">carter</maintainer>
+  <maintainer email="cartercummings1@gmail.com">Carter</maintainer>
   <license>Apache-2.0</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>

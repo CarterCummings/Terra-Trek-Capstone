@@ -7,5 +7,14 @@
         "/opt/ros/humble/lib/python3.10/site-packages",
         "/opt/ros/humble/local/lib/python3.10/dist-packages"
     ],
-    "ros.distro": "humble"
+    "ros.distro": "humble",
+    "files.associations": {
+        "*.xacro": "xml",
+        "*.world": "xml",
+        "string": "cpp",
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "chrono": "cpp"
+    }
 }
