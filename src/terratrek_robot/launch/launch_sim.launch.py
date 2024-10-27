@@ -56,18 +56,18 @@ def generate_launch_description():
                    "joint_broad",],
     )
 
-    extender_spawner = Node(
-        package="controller_manager",
-        executable="spawner",
-        parameters=[
-            launch_ros.parameter_descriptions.ParameterFile(
-                param_file=os.path.join(get_package_share_directory(package_name),'config','extenders_config.yaml'),
-                allow_substs=True), {'use_sim_time': True} ], 
-        arguments=[
-                "joint_state_controller",
-                "joint1_position_controller",
-                "joint2_position_controller",],
-    )
+    # extender_spawner = Node(
+    #     package="controller_manager",
+    #     executable="spawner",
+    #     parameters=[
+    #         launch_ros.parameter_descriptions.ParameterFile(
+    #             param_file=os.path.join(get_package_share_directory(package_name),'config','extenders_config.yaml'),
+    #             allow_substs=True), {'use_sim_time': True} ], 
+    #     arguments=[
+    #             "joint_state_controller",
+    #             "joint1_position_controller",
+    #             "joint2_position_controller",],
+    # )
 
     twist_mux_params = os.path.join(get_package_share_directory(package_name),'config','twist_mux.yaml')
     twist_mux = Node(
@@ -93,6 +93,6 @@ def generate_launch_description():
         controller_spawner,
         joystick,
         twist_mux,
-        extender_spawner,
+        #extender_spawner,
         #position_cont_spawner,
     ])
