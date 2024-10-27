@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-
-    <xacro:unless value="$(arg sim_mode)">
+    <xacro:arg name="sim_mode" default="false"/>
+    <xacro:unless value="${sim_mode}">
         <ros2_control name="RealRobot" type="system">
             <hardware>
                 <plugin>diffdrive_arduino/DiffDriveArduino</plugin>
                 <param name="BL_wheel_name">BL_wheel_joint</param>
-                <param name="BR_wheel_name">BR_wheel_joint</param>
+                <param name="BR_wheel_name">BR_wheel_joint</param>S
                 <param name="FL_wheel_name">FL_wheel_joint</param>
                 <param name="FR_wheel_name">FR_wheel_joint</param>
                 <param name="loop_rate">30</param>
@@ -50,7 +50,7 @@
         </ros2_control>
     </xacro:unless>
 
-    <xacro:if value="$(arg sim_mode)">
+    <xacro:if value="${sim_mode}">
         <ros2_control name= "GazeboSystem" type= "system">
             <hardware>
                 <plugin>gazebo_ros2_control/GazeboSystem</plugin>
@@ -97,7 +97,6 @@
             </joint>
 
         </ros2_control>
-    </xacro:if>
 
     <gazebo>
         <plugin name="skid_steer_drive" filename="libgazebo_ros2_control.so">
@@ -112,6 +111,10 @@
             <maxEffort>5.0</maxEffort>
         </plugin>            
     </gazebo>
+
+    </xacro:if>
+
+
 
 
 </robot>

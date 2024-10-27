@@ -62,16 +62,12 @@ skid_cont:
     # angular.z.max_jerk: NAN
     # angular.z.min_jerk: NAN
 
-joint_state_controller:
-  type: joint_state_controller/JointStateController
-  publish_rate: 50
-
 # Position Controllers ---------------------------------------
-joint1_position_controller:
-  type: effort_controllers/JointPositionController
-  joint: left_arm_outer_joint
-  pid: {p: 2000.0, i: 100, d: 500.0}
-joint2_position_controller:
-  type: effort_controllers/JointPositionController
-  joint: right_arm_outer_joint
-  pid: {p: 2000.0, i: 100, d: 500.0}
+# joint1_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: left_arm_outer_joint
+#   pid: {p: 2000.0, i: 100, d: 500.0}
+# joint2_position_controller:
+#   type: effort_controllers/JointPositionController
+#   joint: right_arm_outer_joint
+#   pid: {p: 2000.0, i: 100, d: 500.0}
